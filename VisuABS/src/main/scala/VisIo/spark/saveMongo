@@ -1,0 +1,13 @@
+import org.apache.spark.sql.functions._
+import com.mongodb.spark.config._
+import com.mongodb.spark._
+
+val df = <outDf>
+val cols = df.columns.map(name => collect_list(name).as(name))
+val dfAgg = df.agg(cols.head, cols.tail: _*)
+val varValues = array(dfAgg.columns.map(name => struct(lit(name).as("cols"), col(name).as("series"))): _*)
+val dfFinal = dfAgg.select(varValues.as("var_values")).select(explode(col("var_values")).as("var_values")).select("var_values.*")
+val writeConfig = WriteConfig(Map("collection" -> "collecrt", "writeConcern.w" -> "majority"), Some(WriteConfig(sc)))
+MongoSpark.save(dfFinal, writeConfig)
+
+

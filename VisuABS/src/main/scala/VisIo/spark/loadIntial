@@ -1,0 +1,4 @@
+import org.apache.spark.sql.SQLContext
+val a = <n>
+val sqlcontext = new org.apache.spark.sql.SQLContext(sc)
+val dfInput = sqlcontext.read.format("jdbc").option("url", "jdbc:mysql://sandbox.c4e.kyomei.fr:10500/table").option("driver", "com.mysql.jdbc.Driver").option("dbtable", "timeserie" ).option("user", "root").option("password", "mypass123").load()

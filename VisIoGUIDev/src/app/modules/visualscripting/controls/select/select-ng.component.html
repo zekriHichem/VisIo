@@ -1,0 +1,6 @@
+<select class="form-control" style="border-radius: 1px" (change)="change($event.target.value)" [ngModel]="selected">
+
+  <optgroup *ngFor="let v of value" label="{{v.name}}" >
+    <option *ngFor="let i of v.tables" value="{{v.datetime}}*{{v.host}}/{{v.port}}/{{v.user}}/{{v.password}}/{{v.db}}/{{i}}">{{i}}</option>
+  </optgroup>
+</select>

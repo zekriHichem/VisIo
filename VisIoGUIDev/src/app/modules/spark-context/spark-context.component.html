@@ -1,0 +1,98 @@
+<!-- Spark Cluster seting -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <mat-card fxFlex="100">
+        <div class=" float-lg-right">
+          <mat-icon *ngIf="!serverruning" style="color:red;">lens</mat-icon>
+          <mat-icon *ngIf="serverruning" style="color: green">lens</mat-icon>
+
+        </div>
+      <div class = 'card-title'><h3>My Cluster Spark </h3> </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-4">
+              <label>Your adresse Livy</label> <br>
+              <input   type="text" class="form-control" [(ngModel)]="livyAdr">
+
+            </div>
+            <div class="col-lg-4">
+              <label>Your Port Livy</label> <br>
+              <input  type="number" class="form-control" [(ngModel)]="livyPort" >
+
+
+            </div>
+            <div class="col-lg-4">
+              <label></label> <br>
+              <button (click)="addNewCluster()"  class="btn btn-success form-control">Setup </button>
+
+            </div>
+
+          </div>
+          <br>
+          <p style="color: red" *ngIf="!serverruning">Check your server</p>
+        </div>
+      </mat-card>
+
+    </div>
+
+  </div>
+  <br>
+  <br>
+<!-- Spark Sessions Table -->
+  <div *ngIf="serverruning" class = "row">
+    <div class="col-lg-12">
+      <mat-card fxFlex="100">
+        <h3>My Spark Sessions</h3>
+        <button class="float-lg-right" style="margin-left: 50px" mat-mini-fab  (click)="refTable()" color="gray"><mat-icon>refresh</mat-icon>
+        </button>
+      <button mat-raised-button class="btn btn-info float-lg-right " (click)="OpenModal()">ADD NEW SESSION</button>
+      </mat-card>
+    </div>
+  </div>
+
+  <br>
+  <div *ngIf="serverruning"  class="row">
+    <div class="col-lg-12">
+      <i class="fa fa-redo-alt"></i>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="Session Id">
+          <th mat-header-cell *matHeaderCellDef> Session Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Kind">
+          <th mat-header-cell *matHeaderCellDef> Kind </th>
+          <td mat-cell *matCellDef="let element"> {{element.kind}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Status">
+          <th mat-header-cell *matHeaderCellDef> Status  </th>
+          <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Action">
+          <th mat-header-cell *matHeaderCellDef>Action  </th>
+          <td mat-cell *matCellDef="let element"> <mat-icon (click)="deleteSession(element)" style="color: red">delete</mat-icon></td>
+        </ng-container>
+        <ng-container matColumnDef="Logs">
+          <th mat-header-cell *matHeaderCellDef>Logs  </th>
+          <td mat-cell *matCellDef="let element"> <a href="{{element.logs}}" target="_blank" >Session</a></td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row class="tableRow" *matRowDef="let row; columns: displayedColumns;" (click)="sessionClick(row)" [routerLink]="['/sessions',row.id]"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+  <br>
+  <br>
+
+</div>
+
+
+

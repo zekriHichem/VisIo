@@ -1,0 +1,98 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div style="width:600px">
+  <h2 mat-dialog-title>Add new Spark Session</h2>
+  <div mat-dialog-content>
+      <div class="row">
+        <div class="col-lg-6">
+          <label >Database type</label>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Select database type</mat-label>
+            <mat-select [formControl]="selectFormControl" required>
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let animal of databaseType" [value]="animal">
+                {{animal.viewValue}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="selectFormControl.hasError('required')">
+              This field is required
+            </mat-error>
+            <mat-hint>You can pick up your favorite car here</mat-hint>
+          </mat-form-field>
+
+        </div>
+        <div class="col-lg-6">
+          <label for="dbName">Database name</label>
+          <input type="text" class="form-control is-invalid" id="dbName" placeholder="Database Name" [(ngModel)]="dbname" required>
+          <div *ngIf="!dbname" class="invalid-feedback">
+            Please provide a database name.
+          </div>
+        </div>
+      </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="hostname">Host name</label>
+        <input type="text" class="form-control is-invalid" id="hostname" placeholder="Host Name" [(ngModel)]="hostname" required>
+        <div *ngIf="!hostname" class="invalid-feedback">
+          Please provide a Host name.
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <label for="port">Port name</label>
+        <input type="number" class="form-control is-invalid" id="port" placeholder="Port" [(ngModel)]="port" required>
+        <div *ngIf="!port" class="invalid-feedback">
+          Please provide a Port.
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="username">User name</label>
+        <input type="text" class="form-control is-invalid" id="username" placeholder="User Name" [(ngModel)]="username" required>
+        <div *ngIf="!username" class="invalid-feedback">
+          Please provide a User name.
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="username">Date time field</label>
+        <input type="text" class="form-control is-invalid" id="datetime" placeholder="date time field" [(ngModel)]="datetime" required>
+        <div *ngIf="!datetime" class="invalid-feedback">
+          Please provide a User name.
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+  </div>
+  <div mat-dialog-actions align="end">
+
+        <span>
+          <button
+            type="button"
+            mat-flat-button
+            color="primary"
+            (click)="addNewBdd()"
+            [disabled] = "!username || !port || !hostname || !dbname || selectFormControl.hasError('required')"
+          >
+            Save
+          </button>
+          <button
+            type="button"
+            mat-stroked-button
+            color="primary"
+            (click)="CloseDialog()"
+          >
+            Cancel
+          </button>
+        </span>
+  </div>
+</div>

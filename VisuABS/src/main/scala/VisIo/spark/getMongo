@@ -1,0 +1,6 @@
+import com.mongodb.spark.config._
+import com.mongodb.spark._
+
+
+val readConfig = ReadConfig(Map("collection" -> "<nameCollection>", "readPreference.name" -> "secondaryPreferred"), Some(ReadConfig(sc)))
+val dfInput = MongoSpark.load(sc, readConfig)

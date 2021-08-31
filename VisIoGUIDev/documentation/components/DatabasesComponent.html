@@ -1,0 +1,736 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>dashboard documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">dashboard documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DatabasesComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/databases/databases.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-databases</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./databases.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./databases.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#container">container</a>
+                            </li>
+                            <li>
+                                <a href="#matDialogRef">matDialogRef</a>
+                            </li>
+                            <li>
+                                <a href="#url_DB_Mang">url_DB_Mang</a>
+                            </li>
+                            <li>
+                                <a href="#user">user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAllBdds">getAllBdds</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#OpenModal">OpenModal</a>
+                            </li>
+                            <li>
+                                <a href="#refTable">refTable</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, resolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, matDialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/modules/databases/databases.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>resolver</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>matDialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllBdds"></a>
+                    <span class="name">
+                        <b>
+                            getAllBdds
+                        </b>
+                        <a href="#getAllBdds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllBdds()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/modules/databases/databases.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/modules/databases/databases.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="OpenModal"></a>
+                    <span class="name">
+                        <b>
+                            OpenModal
+                        </b>
+                        <a href="#OpenModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>OpenModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/modules/databases/databases.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refTable"></a>
+                    <span class="name">
+                        <b>
+                            refTable
+                        </b>
+                        <a href="#refTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refTable()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/modules/databases/databases.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="container"></a>
+                        <span class="name">
+                            <b>
+                            container</b>
+                            <a href="#container"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;container&#x27;, {static: true, read: ViewContainerRef})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/modules/databases/databases.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="matDialogRef"></a>
+                        <span class="name">
+                            <b>
+                            matDialogRef</b>
+                            <a href="#matDialogRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Database.html" target="_self" >MatDialogRef&lt;AddDatabaseModalComponent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/modules/databases/databases.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="url_DB_Mang"></a>
+                        <span class="name">
+                            <b>
+                            url_DB_Mang</b>
+                            <a href="#url_DB_Mang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;http://127.0.0.1:5000/&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/modules/databases/databases.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name">
+                            <b>
+                            user</b>
+                            <a href="#user"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/databases/databases.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, ComponentFactoryResolver, Inject, OnInit, ViewChild, ViewContainerRef} from &#x27;@angular/core&#x27;;
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from &#x27;@angular/material&#x27;;
+import {AddDatabaseModalComponent} from &#x27;../modal/add-database-modal/add-database-modal.component&#x27;;
+import {HttpClient} from &#x27;@angular/common/http&#x27;;
+import {DbStatus} from &#x27;../../models/DbStatus&#x27;;
+import {DatabaseComponent} from &#x27;./database/database.component&#x27;;
+
+@Component({
+  selector: &#x27;app-databases&#x27;,
+  templateUrl: &#x27;./databases.component.html&#x27;,
+  styleUrls: [&#x27;./databases.component.scss&#x27;]
+})
+export class DatabasesComponent implements OnInit {
+  matDialogRef: MatDialogRef&lt;AddDatabaseModalComponent&gt;;
+  user: String;
+  url_DB_Mang &#x3D; &#x27;http://127.0.0.1:5000/&#x27; ;
+  @ViewChild(&#x27;container&#x27;, {static: true, read: ViewContainerRef}) container;
+
+
+  constructor (private http: HttpClient, private resolver: ComponentFactoryResolver ,private matDialog: MatDialog) { }
+
+  ngOnInit() {
+    this.user &#x3D; sessionStorage.getItem(&#x27;username&#x27;);
+    console.log(&#x27;hell&#x27;);
+    this.getAllBdds();
+  }
+
+  getAllBdds(){
+    this.http.get(this.url_DB_Mang + &#x27;getallbdd/&#x27; + this.user).subscribe((res: DbStatus[]) &#x3D;&gt; {
+      res.forEach(e &#x3D;&gt; {
+        console.log(e);
+        const ref &#x3D; this.container.createComponent(this.resolver.resolveComponentFactory(DatabaseComponent));
+        ref.instance.ref &#x3D; ref;
+        ref.instance.status &#x3D; e.status ;
+        ref.instance.idd &#x3D; e.id;
+        ref.instance.typed &#x3D; e.typed;
+        ref.instance.host &#x3D; e.host;
+        ref.instance.port &#x3D; e.port;
+        ref.instance.db &#x3D; e.db;
+        if (e.status &#x3D;&#x3D; &#x27;off&#x27;) {
+          ref.instance.bdd_status &#x3D; false;
+        } else  {
+          ref.instance.bdd_status &#x3D; true;
+        }
+      });
+    });
+
+  }
+  refTable() {
+    this.container.clear();
+    this.getAllBdds();
+  }
+
+  OpenModal() {
+    this.matDialogRef &#x3D; this.matDialog.open(AddDatabaseModalComponent, {
+      disableClose: true
+    });
+
+    this.matDialogRef.afterClosed().subscribe(res &#x3D;&gt; {
+      this.container.clear();
+      this.getAllBdds();
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+
+  &lt;div class &#x3D; &quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+      &lt;mat-card fxFlex&#x3D;&quot;100&quot;&gt;
+        &lt;h3&gt;Databases&lt;/h3&gt;
+        &lt;button class&#x3D;&quot;float-lg-right&quot; style&#x3D;&quot;margin-left: 50px&quot; mat-mini-fab  (click)&#x3D;&quot;refTable()&quot; color&#x3D;&quot;gray&quot;&gt;&lt;mat-icon&gt;refresh&lt;/mat-icon&gt;
+        &lt;/button&gt;
+        &lt;button mat-raised-button class&#x3D;&quot;btn btn-info float-lg-right &quot; (click)&#x3D;&quot;OpenModal()&quot;&gt;ADD NEW DATABASE&lt;/button&gt;
+      &lt;/mat-card&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div #container&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./databases.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <div class = "row">    <div class="col-lg-12">      <mat-card fxFlex="100">        <h3>Databases</h3>        <button class="float-lg-right" style="margin-left: 50px" mat-mini-fab  (click)="refTable()" color="gray"><mat-icon>refresh</mat-icon>        </button>        <button mat-raised-button class="btn btn-info float-lg-right " (click)="OpenModal()">ADD NEW DATABASE</button>      </mat-card>    </div>  </div></div><br><br><div #container></div></div>'
+    var COMPONENTS = [{'name': 'AddAlgoModalComponent', 'selector': 'app-add-algo-modal'},{'name': 'AddDatabaseModalComponent', 'selector': 'app-add-database-modal'},{'name': 'AddSessionModalComponent', 'selector': 'app-add-session-modal'},{'name': 'AlgorithmComponent', 'selector': 'app-algorithm'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaComponent', 'selector': 'app-widget-area'},{'name': 'CardComponent', 'selector': 'app-widget-card'},{'name': 'CheckNgComponent', 'selector': 'app-select-ng'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DatabaseComponent', 'selector': 'app-database'},{'name': 'DatabasesComponent', 'selector': 'app-databases'},{'name': 'DefaultComponent', 'selector': 'app-default'},{'name': 'DftcardComponent', 'selector': 'app-dftcard'},{'name': 'DftComponent', 'selector': 'app-dft'},{'name': 'DftsComponent', 'selector': 'app-dfts'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LoadDataComponent', 'selector': 'app-load-data'},{'name': 'NumberNgComponent', 'selector': 'app-number-ng'},{'name': 'ParamCardComponent', 'selector': 'app-param-card'},{'name': 'PcaComponent', 'selector': 'app-pca'},{'name': 'PieComponent', 'selector': 'app-widget-pie'},{'name': 'RunbtnComponent', 'selector': 'app-runbtn'},{'name': 'RunStatusNgComponent', 'selector': 'app-number-ng'},{'name': 'ScatterchartComponent', 'selector': 'app-scatterchart'},{'name': 'ScatterplotComponent', 'selector': 'app-scatterplot'},{'name': 'SelectNgComponent', 'selector': 'app-select-ng'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SMACardComponent', 'selector': 'app-smacard'},{'name': 'SmaComponent', 'selector': 'app-sma'},{'name': 'SparkContextComponent', 'selector': 'app-spark-context'},{'name': 'VisualscriptingComponent', 'selector': 'app-visualscripting'},{'name': 'WmacardComponent', 'selector': 'app-wmacard'},{'name': 'WmaComponent', 'selector': 'app-wma'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DatabasesComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DatabasesComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

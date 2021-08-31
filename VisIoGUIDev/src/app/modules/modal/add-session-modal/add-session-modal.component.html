@@ -1,0 +1,37 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div style="width:300px">
+  <h2 mat-dialog-title>Add new Spark Session</h2>
+  <div mat-dialog-content>
+    <label>Chose your session kind</label>
+    <select class="form-control" [(ngModel)]="selectedKind">
+      <option>
+        Spark
+      </option>
+      <option>
+        Pyspark
+      </option>
+    </select>
+    <br>
+    <br>
+  </div>
+  <div mat-dialog-actions align="end">
+        <span>
+          <button
+            type="button"
+            mat-flat-button
+            color="primary"
+            (click)="addNewsession()"
+          >
+            Save
+          </button>
+          <button
+            type="button"
+            mat-stroked-button
+            color="primary"
+            (click)="CloseDialog()"
+          >
+            Cancel
+          </button>
+        </span>
+  </div>
+</div>

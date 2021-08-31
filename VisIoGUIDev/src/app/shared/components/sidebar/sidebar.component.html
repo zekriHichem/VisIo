@@ -1,0 +1,36 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>Zekri Hicham</h2>
+            <h4>h.zekri@esi-sba.dz</h4>
+        </div>
+        <img src="./assets/img/moi.jpg" alt="Ma photo">
+    </div>
+
+    <mat-divider></mat-divider>
+
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+  <mat-divider></mat-divider>
+  <h2 matSubheader>operations</h2>
+
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/SparkContext">Connect to Spark cluster</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/databases">Connect to Data Sources</a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/visual">Visual Scripting</a>
+
+
+  <h2 matSubheader>setting</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>contact_phone</mat-icon>
+        Profile
+    </a>
+
+</mat-nav-list>

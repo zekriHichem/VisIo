@@ -1,0 +1,39 @@
+import com.github.unsupervise.spark.tss.core._
+import com.github.unsupervise.spark.tss.functions._
+import org.apache.spark.ml.linalg.Vectors
+import org.apache.spark.sql.functions
+import org.apache.spark.sql.functions._
+import com.mongodb.spark.config._
+import com.mongodb.spark._
+import org.apache.spark.sql.functions
+
+val withFourierTable = tss.addZNormalized("zseries", TSS.SERIES_COLNAME, 0.0001).addDFT("dft", "zseries").addDFTFrequencies("dftFreq", TSS.SERIES_COLNAME, TSS.TIMEGRANULARITY_COLNAME).addDFTPeriodogram("dftPeriodogram", "dft")
+val meanFourierFrequencyStep = withFourierTable.colSeqFirstStep("dftFreq").agg(mean("value")).first.getDouble(0)
+val newInterpolationSamplePoints = (0 until 99).map(_.toDouble * meanFourierFrequencyStep)
+val minMaxAndMaxMinFourierFrequency = withFourierTable.series.select(min(array_max(col("dftFreq"))), max(array_min(col("dftFreq")))).first
+val minMaxFourierFrequency = minMaxAndMaxMinFourierFrequency.getDouble(0)
+val maxMinFourierFrequency = minMaxAndMaxMinFourierFrequency.getDouble(1)
+val keptInterpolationSamplePoints = newInterpolationSamplePoints.filter(x => x < minMaxFourierFrequency && x > maxMinFourierFrequency).toArray
+val interpolatedFourierTSS = withFourierTable.addConstant("interpolatedDFTFreq", keptInterpolationSamplePoints).addLinearInterpolationPoints("interpolatedDFTPeriodogram", "dftFreq", "dftPeriodogram", keptInterpolationSamplePoints)
+import com.github.unsupervise.spark.tss.functions._
+import com.github.unsupervise.spark.tss.functions.{log10 => lg10}
+
+val logScaledTSS = interpolatedFourierTSS.addUDFColumn("logInterpolatedDFTPeriodogram", "interpolatedDFTPeriodogram", functions.udf(scale(0.001).andThen(lg10(1D)).andThen((seq: Seq[Double]) => { Vectors.dense(seq.toArray) }))).repartition(1)
+val scaledTSS = logScaledTSS.addColScaled("logInterpolatedDFTPeriodogram_ScaledVecColScaled", "logInterpolatedDFTPeriodogram", true, true)
+val dftfinal = scaledTSS.addSeqFromMLVector("DFTpre<id>TSS","logInterpolatedDFTPeriodogram_ScaledVecColScaled")
+import org.apache.spark.sql.types.MapType._
+import org.apache.spark.sql.DataFrame
+var ndf = dftfinal.series.withColumn("cols", map_values(col("decorators")).getItem(0)).drop("decorators")
+def TransposeDF(df: DataFrame, columns: Seq[String], pivotCol: String): DataFrame = {
+    val columnsValue = columns.map(x => "'" + x + "', " + x)
+    val stackCols = columnsValue.mkString(",")
+    val df_1 = df.selectExpr(pivotCol, "stack(" + columns.size + "," + stackCols + ")").select(pivotCol, "col0", "col1")
+    val final_df = df_1.groupBy(col("col0")).pivot(pivotCol).agg(collect_list("col1")).withColumnRenamed("col0", pivotCol)
+    final_df
+  }
+val productTypeDF = TransposeDF(ndf, Seq("DFTpre<id>TSS"), "cols")
+val df4 = productTypeDF.drop("cols")
+val df1 = df4.select(df4.columns.map(c => element_at(col(c),1).alias(c)): _*)
+val dff = df1.select(explode(arrays_zip(df1.columns.map(c => col(c).alias(c)):_*))).select(df1.columns.map(c => col("col."+c).alias(c)):_*)
+val DFTpre<id> = dff.drop("time")
+val DFTpre<id>TSS = dftfinal

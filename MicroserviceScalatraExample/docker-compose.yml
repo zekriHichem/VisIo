@@ -1,0 +1,11 @@
+version: '2.0'
+services:  
+  webdft:
+   build: ./DFT/
+   ports:
+   - 5005:80
+   environment:
+   - IP_ADR=172.25.187.81
+   networks: 
+   - backend
+

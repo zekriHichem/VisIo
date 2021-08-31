@@ -1,0 +1,1137 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>dashboard documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">dashboard documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DftcardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/smoothing/dftcard/dftcard.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dftcard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./dftcard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./dftcard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#btnRun">btnRun</a>
+                            </li>
+                            <li>
+                                <a href="#container">container</a>
+                            </li>
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#isloaded">isloaded</a>
+                            </li>
+                            <li>
+                                <a href="#params">params</a>
+                            </li>
+                            <li>
+                                <a href="#parent">parent</a>
+                            </li>
+                            <li>
+                                <a href="#rate">rate</a>
+                            </li>
+                            <li>
+                                <a href="#refchart">refchart</a>
+                            </li>
+                            <li>
+                                <a href="#selectedParm">selectedParm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addChart">addChart</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#rateChange">rateChange</a>
+                            </li>
+                            <li>
+                                <a href="#removeCard">removeCard</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#database">database</a>
+                            </li>
+                            <li>
+                                <a href="#ref">ref</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(resolver: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>resolver</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="database"></a>
+                        <b>database</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:20</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ref"></a>
+                        <b>ref</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:19</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addChart"></a>
+                    <span class="name">
+                        <b>
+                            addChart
+                        </b>
+                        <a href="#addChart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addChart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rateChange"></a>
+                    <span class="name">
+                        <b>
+                            rateChange
+                        </b>
+                        <a href="#rateChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>rateChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeCard"></a>
+                    <span class="name">
+                        <b>
+                            removeCard
+                        </b>
+                        <a href="#removeCard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeCard()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="btnRun"></a>
+                        <span class="name">
+                            <b>
+                            btnRun</b>
+                            <a href="#btnRun"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="container"></a>
+                        <span class="name">
+                            <b>
+                            container</b>
+                            <a href="#container"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;container&#x27;, {static: false, read: ViewContainerRef})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isloaded"></a>
+                        <span class="name">
+                            <b>
+                            isloaded</b>
+                            <a href="#isloaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="params"></a>
+                        <span class="name">
+                            <b>
+                            params</b>
+                            <a href="#params"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="parent"></a>
+                        <span class="name">
+                            <b>
+                            parent</b>
+                            <a href="#parent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../components/DftcardComponent.html" target="_self" >DftcardComponent</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rate"></a>
+                        <span class="name">
+                            <b>
+                            rate</b>
+                            <a href="#rate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="refchart"></a>
+                        <span class="name">
+                            <b>
+                            refchart</b>
+                            <a href="#refchart"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedParm"></a>
+                        <span class="name">
+                            <b>
+                            selectedParm</b>
+                            <a href="#selectedParm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/shared/smoothing/dftcard/dftcard.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef} from &#x27;@angular/core&#x27;;
+import {HttpClient} from &#x27;@angular/common/http&#x27;;
+import {Database} from &#x27;../../../models/Database&#x27;;
+import {LinechartComponent} from &#x27;../../widgets/linechart/linechart.component&#x27;;
+
+@Component({
+  selector: &#x27;app-dftcard&#x27;,
+  templateUrl: &#x27;./dftcard.component.html&#x27;,
+  styleUrls: [&#x27;./dftcard.component.scss&#x27;]
+})
+export class DftcardComponent implements OnInit {
+  selectedParm: any;
+  params &#x3D; [];
+  rate: any;
+  btnRun &#x3D; true;
+  data &#x3D; [];
+  refchart: any;
+  isloaded &#x3D; false;
+  @Input()ref: any;
+  @Input()database: any;
+
+  parent: DftcardComponent;
+  @ViewChild(&#x27;container&#x27;, {static: false, read: ViewContainerRef}) container;
+
+  constructor(private resolver: ComponentFactoryResolver, private http: HttpClient) {
+    this.parent &#x3D; this;
+  }
+  ngOnInit() {
+    const url &#x3D; &#x27;http://127.0.0.1:5001/getParm/&#x27; + this.database.replace(&#x27; &#x27; , &#x27;,&#x27;);
+    this.http.get(url).subscribe((res: Database[]) &#x3D;&gt; {
+      res.forEach(y &#x3D;&gt; {
+        this.params.push(y);
+      });
+    });
+  }
+
+  removeCard() {
+    this.ref.destroy();
+  }
+
+  rateChange() {
+    if (this.isloaded) {
+      this.data &#x3D; [];
+      console.log(this.rate);
+      const url &#x3D; &#x27;http://127.0.0.1:5001/dft/&#x27; + this.database + &#x27;/&#x27; + this.selectedParm + &#x27;/&#x27; + String(this.rate);
+      this.http.get(url).subscribe((res: Database[]) &#x3D;&gt; {
+        res.forEach(y &#x3D;&gt; {
+          this.data.push(y);
+        });
+        this.refchart.instance.data &#x3D; this.data;
+        this.refchart.instance.load();
+      });
+    } else {
+      console.log(&#x27;hello&#x27;);
+    }
+  }
+
+  addChart() {
+    this.data &#x3D; [];
+    const url &#x3D; &#x27;http://127.0.0.1:5001/dft/&#x27; + this.database + &#x27;/&#x27; + this.selectedParm + &#x27;/&#x27; + String(this.rate);
+    this.http.get(url).subscribe((res: Database[]) &#x3D;&gt; {
+      res.forEach(y &#x3D;&gt; {
+        this.data.push(y);
+      });
+      const ref &#x3D; this.container.createComponent(this.resolver.resolveComponentFactory(LinechartComponent));
+      ref.instance.ref &#x3D; ref;
+      ref.instance.data &#x3D; this.data;
+      ref.instance.parent &#x3D; this.parent;
+      ref.instance.parmname &#x3D; this.selectedParm;
+      this.refchart &#x3D; ref;
+      this.isloaded &#x3D; true;
+      this.btnRun &#x3D; false;
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+      &lt;mat-card fxFlex&#x3D;&quot;100&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header float-lg-right&quot;&gt;
+          &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;removeCard()&quot;&gt;remove&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-title&quot;&gt;
+          &lt;h4&gt;Discrete Fourier Transform&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+              &lt;label&gt;Chose your feature&lt;/label&gt;&lt;br&gt;
+              &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;selectedParm&quot;&gt;
+                &lt;option *ngFor&#x3D;&quot;let i of params&quot;&gt;{{i}}&lt;/option&gt;
+              &lt;/select&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+              &lt;label&gt;Chose your windows size&lt;/label&gt;&lt;br&gt;
+              &lt;input class&#x3D;&quot;range&quot; type&#x3D;&quot;range&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;100&quot; value&#x3D;&quot;10&quot; step&#x3D;&quot;1&quot; [(ngModel)]&#x3D;&quot;rate&quot; (change)&#x3D;&quot;rateChange()&quot; onmousemove&#x3D;&quot;rangevalue1.value&#x3D;value&quot; style&#x3D;&quot;width: 80%&quot;/&gt;
+              &lt;output id&#x3D;&quot;rangevalue1&quot;&gt;10&lt;/output&gt;
+
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+              &lt;br&gt;
+              &lt;button class&#x3D;&quot;btn btn-info&quot; (click)&#x3D;&quot;addChart()&quot; *ngIf&#x3D;&quot;btnRun&quot;&gt;Run Algo &lt;i class&#x3D;&quot;fa fa-caret-right&quot;&gt;&lt;/i&gt; &lt;/button&gt;
+
+            &lt;/div&gt;
+
+
+          &lt;/div&gt;
+          &lt;hr&gt;
+          &lt;div class&#x3D;&quot;row&quot; #container&gt;
+
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/mat-card&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./dftcard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+.range {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.range::-webkit-slider-runnable-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.range[disabled]::-webkit-slider-runnable-track {
+  border: 1px solid #d7dbdd;
+  background-color: transparent;
+  opacity: 0.4;
+}
+
+.range::-moz-range-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+}
+
+.range::-ms-track {
+  color: transparent;
+  border: none;
+  background: none;
+  height: 6px;
+}
+
+.range::-ms-fill-lower {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+.range::-ms-fill-upper {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+.range::-ms-tooltip { display: none; /* display and visibility only */ }
+
+.range::-moz-range-thumb {
+  border-radius: 20px;
+  height: 18px;
+  width: 18px;
+  border: none;
+  background: none;
+  background-color: #606670;
+}
+
+.range:active::-moz-range-thumb {
+  outline: none;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  margin-top: -7px;
+}
+
+.range[disabled]::-webkit-slider-thumb {
+  background-color: transparent;
+  border: 1px solid #d7dbdd;
+}
+
+.range:active::-webkit-slider-thumb {
+  outline: none;
+}
+
+.range::-ms-thumb {
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  border: none;
+}
+
+.range:active::-ms-thumb {
+  border: none;
+}
+
+output {
+  border: 1px solid #d7dbdd;
+  color: #333;
+  font-family: &#x27;Lato&#x27;, sans-serif;
+  font-size: 12px;
+  padding: .4em .6em;
+  border-radius: 3px;
+}
+
+.container--dark {
+  background-color: #11181d;
+
+  h6 {
+    color: #ccc;
+  }
+
+  .range::-webkit-slider-runnable-track {
+    background-color: #606670;
+  }
+
+  .range[disabled]::-webkit-slider-runnable-track {
+    border: 1px solid #606670;
+    background-color: transparent;
+  }
+
+  .range::-moz-range-track {
+    background-color: #606670;
+    border: none;
+  }
+
+  .range::-ms-fill-lower {
+    background-color: #606670;
+  }
+
+  .range::-ms-fill-upper {
+    background-color: #606670;
+  }
+
+  output {
+    border: 1px solid #2b3039;
+    color: #aaa;
+    font-family: &#x27;Lato&#x27;, sans-serif;
+    font-size: 12px;
+    padding: .4em .6em;
+    border-radius: 3px;
+  }
+
+  .range::-webkit-slider-thumb {
+    background-color: #aaa;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+  }
+
+  .range[disabled]::-webkit-slider-thumb {
+    background-color: transparent;
+    border: 1px solid #606670;
+    box-shadow: none;
+  }
+
+  .range::-moz-range-thumb {
+    background-color: #aaa;
+  }
+
+  .range::-ms-thumb {
+    background-color: #aaa;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <div class="row">    <div class="col-lg-12">      <mat-card fxFlex="100">        <div class="card-header float-lg-right">          <button class="btn btn-danger" (click)="removeCard()">remove</button>        </div>        <div class="card-title">          <h4>Discrete Fourier Transform</h4>        </div>        <div class="card-body">          <div class="row">            <div class="col-lg-4">              <label>Chose your feature</label><br>              <select class="form-control" [(ngModel)]="selectedParm">                <option *ngFor="let i of params">{{i}}</option>              </select>            </div>            <div class="col-lg-4">              <label>Chose your windows size</label><br>              <input class="range" type="range" min="0" max="100" value="10" step="1" [(ngModel)]="rate" (change)="rateChange()" onmousemove="rangevalue1.value=value" style="width: 80%"/>              <output id="rangevalue1">10</output>            </div>            <div class="col-lg-4">              <br>              <button class="btn btn-info" (click)="addChart()" *ngIf="btnRun">Run Algo <i class="fa fa-caret-right"></i> </button>            </div>          </div>          <hr>          <div class="row" #container>          </div>        </div>      </mat-card>    </div>  </div></div><br><br></div>'
+    var COMPONENTS = [{'name': 'AddAlgoModalComponent', 'selector': 'app-add-algo-modal'},{'name': 'AddDatabaseModalComponent', 'selector': 'app-add-database-modal'},{'name': 'AddSessionModalComponent', 'selector': 'app-add-session-modal'},{'name': 'AlgorithmComponent', 'selector': 'app-algorithm'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaComponent', 'selector': 'app-widget-area'},{'name': 'CardComponent', 'selector': 'app-widget-card'},{'name': 'CheckNgComponent', 'selector': 'app-select-ng'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DatabaseComponent', 'selector': 'app-database'},{'name': 'DatabasesComponent', 'selector': 'app-databases'},{'name': 'DefaultComponent', 'selector': 'app-default'},{'name': 'DftcardComponent', 'selector': 'app-dftcard'},{'name': 'DftComponent', 'selector': 'app-dft'},{'name': 'DftsComponent', 'selector': 'app-dfts'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LinechartComponent', 'selector': 'app-linechart'},{'name': 'LoadDataComponent', 'selector': 'app-load-data'},{'name': 'NumberNgComponent', 'selector': 'app-number-ng'},{'name': 'ParamCardComponent', 'selector': 'app-param-card'},{'name': 'PcaComponent', 'selector': 'app-pca'},{'name': 'PieComponent', 'selector': 'app-widget-pie'},{'name': 'RunbtnComponent', 'selector': 'app-runbtn'},{'name': 'RunStatusNgComponent', 'selector': 'app-number-ng'},{'name': 'ScatterchartComponent', 'selector': 'app-scatterchart'},{'name': 'ScatterplotComponent', 'selector': 'app-scatterplot'},{'name': 'SelectNgComponent', 'selector': 'app-select-ng'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'SMACardComponent', 'selector': 'app-smacard'},{'name': 'SmaComponent', 'selector': 'app-sma'},{'name': 'SparkContextComponent', 'selector': 'app-spark-context'},{'name': 'VisualscriptingComponent', 'selector': 'app-visualscripting'},{'name': 'WmacardComponent', 'selector': 'app-wmacard'},{'name': 'WmaComponent', 'selector': 'app-wma'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DftcardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DftcardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span> VisIo </span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <a mat-icon-button href="https://zekriHicham.github.io">
+                        <mat-icon>help_outline</mat-icon>
+                    </a>
+                </li>
+                <li>
+                    <a mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                    </a>
+                    <mat-menu #menu="matMenu">
+                        <a mat-menu-item routerLink="/hello">
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </a>
+                    </mat-menu>
+
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,9 @@
+.wrapper {
+  width: 100%;
+  height: 88%;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+.socket.number {
+  background: #96b38a;
+}

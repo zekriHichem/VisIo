@@ -1,0 +1,29 @@
+import com.github.unsupervise.spark.tss.core._
+import com.github.unsupervise.spark.tss.functions._
+import org.apache.spark.ml.linalg.Vectors
+import org.apache.spark.sql.functions
+import org.apache.spark.sql.functions._
+import com.mongodb.spark.config._
+import com.mongodb.spark._
+import org.apache.spark.sql.functions;
+val dataFrame1 = dfInput.withColumn("index",functions.monotonically_increasing_id());
+val df1 = dataFrame1.withColumn("time", dataFrame1("index") + 1.0)
+val df = df1.drop("datetime").drop("index")
+val tss = TSS.build(df,Map(),"time")(spark)
+val joinedTSS = tss.addPCA("logInterpolatedDFTPeriodogram_PCAVec", TSS.SERIES_COLNAME, <nb>, 0.99,None,None).addColScaled("logInterpolatedDFTPeriodogram_ColScaledPCAVec", "logInterpolatedDFTPeriodogram_PCAVec", true, true).addSeqFromMLVector("pcaCoordinatesV", "logInterpolatedDFTPeriodogram_ColScaledPCAVec").drop("logInterpolatedDFTPeriodogram_ColScaledPCAVec", "logInterpolatedDFTPeriodogram_PCAVec", "logInterpolatedDFTPeriodogram_ScaledVecColScaled")
+mport org.apache.spark.sql.types.MapType._
+import org.apache.spark.sql.DataFrame
+var ndf = joinedTSS.series.withColumn("cols", map_values(col("decorators")).getItem(0)).drop("decorators")
+def TransposeDF(df: DataFrame, columns: Seq[String], pivotCol: String): DataFrame = {
+    val columnsValue = columns.map(x => "'" + x + "', " + x)
+    val stackCols = columnsValue.mkString(",")
+    val df_1 = df.selectExpr(pivotCol, "stack(" + columns.size + "," + stackCols + ")").select(pivotCol, "col0", "col1")
+    val final_df = df_1.groupBy(col("col0")).pivot(pivotCol).agg(collect_list("col1")).withColumnRenamed("col0", pivotCol)
+    final_df
+  }
+val productTypeDF = TransposeDF(ndf, Seq("pcaCoordinatesV"), "cols")
+val df = productTypeDF.drop("cols")
+val df1 = df.select(df.columns.map(c => element_at(col(c),1).alias(c)): _*)
+val dff = df1.select(explode(arrays_zip(df1.columns.map(c => col(c).alias(c)):_*))).select(df1.columns.map(c => col("col."+c).alias(c)):_*)
+val PCA<id> = dff
+

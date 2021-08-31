@@ -1,0 +1,30 @@
+<div class="wrapper dotted">
+  <div #nodeEditor class="node-editor" style="height: 1000px"></div>
+</div>
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-lg-2">
+    <button class="btn btn-info w-50" (click)="run()">Run</button>
+  </div>
+    <div class="col-lg-2">
+      <button class="btn btn-danger w-50" (click)="stop()">Stop</button>
+    </div>
+    <div class="col-lg-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Session</mat-label>
+        <mat-select [formControl]="selectSessionSpark" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let animal of databaseType" [value]="animal">
+            {{animal.viewValue}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="selectSessionSpark.hasError('required')">
+          select Session
+        </mat-error>
+        <mat-hint>You can pick up your session</mat-hint>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+</div>
