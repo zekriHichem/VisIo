@@ -18,4 +18,4 @@ By seeing the differents solutions that exist for the visualization of the Time 
 Our solution VisIo is a web software that allows the importion, processing and visualization of TS for both multivariate and univariate types while allowing the description of the pipeline leading to this visualization
 by the interactive assembly of visual blocks (in the movement of "visual scripting" and "low code" tools). This solution allows the import of data from any SQL database any SQL database (Hive, MYSQL, postgres, parquet files ...). It also proposes to chain SPARK algorithms (which are developed in MapReduce) and/or Simple algorithms. This allows us to process massive data and to visualize the results in graphs such as: Line graph, point graph, bar graph bar graphs etc. All this using a modern, flexible and extensible web architecture.
 
- **note** : you can read more details about project in repport [here](https://github.com/zekriHichem/VisIo/blob/main/RapportPFE .pdf).
+ **note** : you can read more details about project in repport [here](https://github.com/zekriHichem/VisIo/blob/main/RapportPFE.pdf).
